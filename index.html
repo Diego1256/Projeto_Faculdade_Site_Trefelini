@@ -1,0 +1,1850 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Para você que procura alimentos naturais e quer cuidar da saúde, temos os produtos que você precisa, basta conhecer mais sobre a Tre Felini">
+        <meta name="ABSTRACT" CONTENT="Feira de produtos veganos">
+        <meta name="KEYWORDS" CONTENT="comida orgânica, comida vegana, lanches sem carne, alimentoorganico, comidaorganica, saudavelevegano, alimentovegano, produtonatural, vidasaudavel, vidavegana, veganoesaboroso, gostosuradevegano, bomvegano  " >
+            
+	    <!-- Meta tags Obrigatórias -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <title>Tre felini - Feira de produtos veganos</title>
+        <!-- icone do site --> 
+        <link rel = "icon" href = "img/logo.png" type = "image/x-icon">
+        <!-- Css geral da página --> 
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <!-- Css da responsividade --> 
+        <link rel="stylesheet" href="css/posicao.css" type="text/css"/>
+        <script src="js/banner.js"></script>
+    </head>
+
+<body>
+       
+    <!-- Tag principal -->
+    <main id="topo" class="container-fluid pl-0 pr-0" >
+        
+        <!-- Modal pedido aceito-->
+        <div class="modal fade pedido_aceito" id="modalExemplo3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog posicao_pedido_aceito" role="document">
+            <div class="modal-content pg_pedido_aceito">
+              <div class="modal-header">
+                <h1 class="modal-title titulo_finalizar pl-2" id="exampleModalLabel">Pedido aceito</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body  corpo_conf bg-white">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center align-middle">
+                            <p class="txt_pedido_aceito m-0 text-center">Pedido realizado com sucesso, será enviado para o seu e-mail a confirmação da compra.</p>
+                        </div>    
+                    </div>  
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                
+                <button type="button" class="btn btn-secondary finalizar_bt fechatudo border-0" data-dismiss="modal" onclick="apaga()">Fechar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        
+        <!-- Modal pagina de confirmação -->
+        <div class="modal fade confirmacao" id="modalExemplo2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog posicao_confirmacao" role="document">
+                <div class="modal-content pagina_confimacao">
+                    <div class="modal-header">
+                        <h1 class="modal-title titulo_finalizar pl-2" id="exampleModalLabel">Confirmação</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body corpo_conf bg-white">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center align-middle">
+                                <p class="texto pergunta_conf ">Você deseja confirmar a encomenda?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary conf mr-3" data-dismiss="modal" data-toggle="modal" data-target="#modalExemplo3">Sim</button>
+                        <button type="button" class="btn btn-secondary  fechar nao" data-dismiss="modal" data-target="header">Não</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal Página da Encomenda -->
+        <div class="modal fade encomenda " id="modalExemplo"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog " role="document" >
+                    <div class="modal-content fechar_pg " >
+                        <div class="modal-header">
+                            <h1 class="modal-title titulo_finalizar pl-2" id="exampleModalLabel">Finalizar pedido:</h1>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body bg-white">
+                            <div class="row">
+                                <div class="col-8">
+                                    <form method="get" action=".">
+                                        <div class="form-group ">
+                                            <label class="mb-2" for="inputEmail4"><strong>E-mail:</strong></label>
+                                            <input type="email" required autocomplete class="form-control campo_texto_encomenda email_checkout mb-3" id="inputEmail4" placeholder="nome@exemplo.com">
+                                            <ul class="feedback m-0 mb-2">
+                                            <li class="feedback_arroba"></li>
+                                            <li class="feedback_ponto"></li>
+                                            <li class="feedback_combr"></li>    
+                                            </ul>
+
+                                            <label class="mb-2" required for="exampleFormControlInput2"><strong>Telefone:</strong></label>
+                                            <input type="tel" class="form-control campo_texto_encomenda telefone mb-3" id="exampleFormControlInput2" placeholder="21 2222 2222" maxlength="10" title="Prencha este campo"  >
+                                            <ul class="feedback m-0 mb-2">
+                                            <li class="feedback_telefone"></li> 
+                                            </ul>
+
+                                            <div class="d-inline-block mr-2">
+                                                <label class="mb-2" for="cep "><strong>Cep:</strong></label>
+                                                <input type="text" required class="form-control mb-3 campo_texto_encomenda cep " id="cep" size="10" maxlength="8" minlenght="8" placeholder="22555333">
+                                                
+                                            </div>
+                                             
+                                            <div class="d-inline-block mb-3">
+                                           
+                                                <label class="mb-2 " for="rua"><strong>&nbsp;Endereço:</strong></label>
+                                                <input type="text"  required class="form-control campo_texto_encomenda endereco " id="rua" placeholder="Ex: Rua dos cajueiros"  id="rua" size="60">
+                                            </div>
+                                            <ul class="feedback m-0 mb-2">
+                                                <li class="feedback_cep"></li>
+                                                 <li class="feedback_endereco"></li> 
+                                                </ul>
+                                            <div class="d-inline-block mr-2 mb-3">
+                                                <label class="mb-2 d-block" for="bairro"><strong>Bairro:</strong></label>
+                                                <input type="text" required class="form-control campo_texto_encomenda bairro " id="bairro" placeholder="Ex: Lins" size="40">
+                                            </div> 
+                                            <div class="d-inline-block mb-3">
+                                                <label class="mb-2 " for="exampleFormControlInput6"><strong>&nbsp;Número:</strong></label>
+                                                <input type="text" required class="form-control campo_texto_encomenda numero  " id="exampleFormControlInput6" placeholder="" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                                            </div>
+                                            
+                                            <ul class="feedback m-0 mb-2">
+                                                <li class="feedback_bairro"></li>
+                                                 <li class="feedback_numero"></li> 
+                                                </ul>
+                                            
+                                            <div class="mb-3 forma_pagamento">
+                                                <label class="pb-1 m-0" for="exampleFormControlInput7">
+                                                    <strong>Forma de Pagamento:</strong>
+                                                </label>
+                                            <div id="exampleFormControlInput7" class="forma_pagamento">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" required type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
+                                                    <label class="form-check-label" for="inlineRadio1">Dinheiro</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" required type="radio" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
+                                                    <label class="form-check-label" for="inlineRadio2">Débito</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" required type="radio" name="inlineRadioOptions" id="inlineRadio2" value="opcao3">
+                                                    <label class="form-check-label" for="inlineRadio3">Crédito</label>
+                                                </div>
+                                                </div>  
+                                                </div> 
+                                                <ul class="feedback m-0 mb-2">
+                                                <li class="feedback_radio"></li> 
+                                                </ul>
+                                                            
+                                                <label class="mb-2 titulo_dt_recebimento" for="exampleFormControlInput8"><strong>Data de recebimento:</strong></label>
+                                                <input type="datetime-local" required class="form-control campo_texto_encomenda data_encom mb-3" id="exampleFormControlInput8" name="exampleFormControlInput8">
+                                                <ul class="feedback m-0 mb-2">
+                                                <li class="feedback_data"></li> 
+                                                </ul>
+                                        </div>
+                                    </form>    
+                          
+                                </div>
+                                <div class="col-4 pl-0 campo_selec">
+                                    <div class="produto_selecionado p-3">
+                                        <div class="row">
+                                            <div class="col-6 pr-0">
+                                                <img class="imagem_encomenda" src="img/" width="100%" alt="Imagem do produto selecionado">
+                                            </div>
+                                        
+                                            <div class="col-4 pr-0">
+                                                <p class="mb-0 pb-0 nome_produto texto">Sem produto</p>
+                                                
+                                            </div>
+                                            <div class="col-2 p-0 d-flex justify-content-start">
+                                                <p class="mb-0 pb-0  pr-3 preco_produto texto">0x R$ 0,00</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 position-relative qtd">
+                                               <p class="resultado text-black quantidade_produto" size="1" type="text" value="1" maxlength="5">"x"</p>
+                                            
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 p-0 pb-3 pt-4">
+                                                <div class="linha_prod   "></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 pt-1 pb-1">
+                                                <p class="mb-0 pb-0 subtotal texto">Subtotal</p>
+                                                
+                                            </div>
+                                             <div class="col-6  pt-2 pb-2">
+                                                <p class="mb-0 pb-0 text-right precototal texto ">R$ 0,00</p>
+                                            </div>
+                                           
+                                        </div>
+                                        <div Class="row"></div>
+
+                                        </div>
+                                    <div class="msg_24h ">
+                                        <div class="row">
+                                            <div class="col-12 pt-2 texto_obs_encomenda">
+                                            
+                                                <p class="texto ">Observação: Você tem 24h para pedir/ reservar e receber até sua residência,
+                                                podendo sofrer alterações no horário futuramente.</p>
+                                            
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary botao_encomendar border-0" data-target="" data-toggle="modal">Encomendar</button>
+                            <button type="button" class="btn btn-secondary cancelar border-0" onclick="apaga()" data-dismiss="modal">Cancelar</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Caveçalho -->
+            <header>
+                <div class="row">     
+                    <!-- Logo -->    
+                    <div  class="col-12 col-sm-3 col-md-3 p-2 logo" >
+                        <div class="pl-4">
+                            <a href="index.html"><img class="logo_img" src="img/logo.png" alt="Logo"  width="100rem"></a> 
+                        </div>
+                    </div>
+                    <!-- Fecha Logo --> 
+                
+                    <!-- Campo de procurar -->     
+                    <div class="col-4 col-sm-6 col-md-6 d-flex flex-column justify-content-center menu cabecalho ">
+                        <div class="input-group campo-procura">
+                            <input type="text" id="id_search_list" name="search"class="form-control p-2 caixa-texto texto" placeholder="Procure aqui por combos e produtos" aria-label="Procure aqui por combos e produtos" aria-describedby="basic-addon2" AUTOCOMPLETE="off">
+                        <div class="input-group-append">
+                            <span class="input-group-text procura" id="basic-addon2"><img src="img/procura.png" alt="busca"></span>
+                        </div>
+                        </div>
+                    </div>
+           
+     
+                    <!-- Fecha Campo de procurar -->    
+
+                    <!-- Botão de comprar -->    
+                    <div class="col-4 col-sm-3 col-md-3 p-4 d-flex flex-column cp justify-content-center cabecalho">
+                        <div class="d-flex flex-row-reverse ">
+                            <div class="compra pr-1">
+                                <img class="carrinho" src="img/compras.png" alt="Carrinho compras" width="35rem" height="35rem"  data-toggle="modal" data-target="#modalExemplo">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fechar botão de comprar -->    
+    
+                    <!-- Navegação Global -->
+                    <div class="col-4 col-sm-12 col-md-12 cabecalho">
+                        <nav class="links">
+                            <div class="navbar navbar-expand-sm  text-white  ">
+                                <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                                <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                                    <ul class="navbar-nav  m-auto">
+                                        <li class="nav-item ">
+                                            <a class="nav-link" href="index.html"><font class="animo">HOME</font></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#salgados"><font class="animo">SALGADOS</font></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#doces"><font class="animo">DOCES</font></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#bebidas"><font class="animo">BEBIDAS</font></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#combo"><font class="animo">COMBO</font></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#empresa"><font class="animo">EMPRESA</font></a>
+                                        </li>
+                                    </ul>
+                                </div>	  
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Fecha Navegação Global -->
+                <div class="row">
+                    <div class="col-12 p-0">
+                        <div>
+                            <img id="imgMainBanner" src="img/mainbanner/1.jpg" alt="1.jpg" class="embed-responsive embed-responsive-21by9 border-0 banner-video p-0" alt="Video Banner" />		
+
+                        </div>		
+                    </div>
+                </div>
+            </header>
+            <!-- Fecha Caveçalho -->
+        
+            <section>
+                <div class="row ">
+				    <div class="col-12  explicacao pt-4 pb-4 ">
+                         <!-- Explicação sobre como operar a compra -->
+					   <p class="d-flex justify-content-center text-center mb-0">Primeiro, clique no seu produto, coloque a quantidade e depois aperte o botão encomendar.</p>
+					</div>  
+                     <!-- Mensagem de Erro ao escrever algo errado -->
+                    <div class="alert position-absolute alert-danger alert-dismissible fade show" role="alert">
+                        Olá, parece que você digitou algo errado, verifique e tente outra vez. 
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>  
+                                 
+                    
+                     
+                </div>
+               
+                <!-- Grupo do Salgado -->
+				<div class="salgados_grupo ml-2 mr-2 anime " >
+                    
+					<div class="row">
+                        <!-- Título do Salgado -->
+						<div  class="col-12 salgados_titulo p-2 pb-2  text-center">
+				            <h1 id="salgados" class=" pb-3">Salgados</h1>
+						</div>
+					</div>
+                    
+					<div class="row">	
+                        
+				        <div class="col-12 col-sm-12 col-lg-12 pl-0 pr-0 d-flex justify-content-center">	
+                            
+                            <div id="demo1" class="carousel slide " data-ride="carousel" data-interval="0">  
+                                
+                                <!-- Indicators -->
+                                  <ul class="carousel-indicators">
+                                    <li data-target="#demo1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#demo1" data-slide-to="1"></li>
+                                    <li data-target="#demo1" data-slide-to="2"></li>
+                                  </ul>
+                                <!-- O Slide dos Salgados -->
+                                <div class="container carousel-inner no-padding carousel ">
+                                    <div class="carousel-item active">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 produtos_carrossel divProdutoThumb" >
+                                            <div id="ingrediente_coxinha" class="alert alert-dismissible fade show border-0 pr-0 mr-0   ingrediente_coxinha" role="alert">
+                                                    <h5 class="text-white">Ingredientes</h5>
+                                                    <p class="text-white p-0 ">
+                                                    3 dentes de alho picados<br>
+                                                    1/2 xícara (de chá) de cebola picada<br>
+                                                    350g (3 xícaras) de carne de jaca<br>
+                                                    2 colheres (de chá) de orégano desidratado<br>
+                                                    1/4 de colher (de chá) de cominho em pó<br>
+                                                    1/4 de colher (de chá) de açafrão em pó (cúrcuma)<br>
+                                                    1 colher (de sopa) de suco de limão<br>
+                                                    1/3 de xícara (de chá) de extrato de tomate<br>
+                                                    2 colheres (de sopa) de azeitonas picadas<br>
+                                                    1/4 de xícara (de chá) de salsinha e cebolinha picadas<br>
+                                                    Sal a gosto<br>
+                                                    Azeite a gosto</p>
+                                                    <button type="button" class="close" aria-label="Close">
+                                                        <span class="text-white" aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                            <div class="deposito d-block" backgUrl="img/salgados/coxinha.jpg" >
+                                                <img src="img/salgados/coxinha.jpg" alt="Coxinha Vegana">
+                                            </div> 
+                                            <div class="descricao_laranja descricao d-block">
+                                                
+                                                <ul class="p-0 ">
+                                                    <li><p class="m-0 text-white prodDescricao prodDescricao pt-3">Coxinha Vegana</p></li>
+                                                    <li class="m-0 d-block">
+                                                        <p  class="m-0 preco text-white prodPreco">R$ 3,99<br><b class="cada">cada</b></p></li>   
+                                                    <li class="text-white saiba-mais d-inline-block" onclick="coxinhaIngrediente()">Saiba mais</li>
+                                                    <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>   
+                                                        <input type="button" class="quantidade d-inline-block " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    
+                                                </ul> 
+                                                
+                                            </div>
+                                        </div> 
+                                        
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito d-block" backgUrl="img/salgados/focaccia.jpg">
+                                                <img src="img/salgados/focaccia.jpg" alt="Foccacia Italiana">  
+                                            </div>     
+                                            <div class="descricao_laranja descricao d-block">
+                                                <ul class="p-0 ">
+                                                    <li><p class="m-0 prodDescricao pt-3 text-white prodDescricao">Foccacia Italiana </li>
+                                                    <li class="m-0 d-block"> 
+                                                        <p class="m-0 preco text-white prodPreco">R$ 3,99<br> <b class="cada">cada</b></p>
+                                                    </li>
+                                                    <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                    <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                </ul> 
+                                            </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/salgados/hamburguer_forno.jpg" alt="Hamburguer de forno">
+                                            </div>    
+                                            <div class="descricao_laranja descricao d-block">
+                                                <ul class="p-0 ">
+                                                    <li><p class="m-0 prodDescricao pt-3 prodDescricao text-white">Hamburguer de forno</p></li>
+                                                    <li class="m-0 d-block"> 
+                                                        <p class="m-0 preco text-white prodPreco">R$ 3,99<br><b class="cada">cada</b></p>
+                                                    </li>
+                                                    <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                    <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                </ul> 
+                                            </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/salgados/hamburguer_vegano.jpg" alt="Hamburguer Vegano">   
+                                            </div>    
+                                            <div class="descricao_laranja descricao d-block">  
+                                                <ul class="p-0">
+                                                    <li><p class="m-0 prodDescricao pt-3 prodDescricao text-white">Hamburguer Vegano</p></li>
+                                                    <li class="m-0 d-block"> 
+                                                        <p class="m-0 preco text-white prodPreco">R$ 3,99<br><b class="cada">cada</b></p>
+                                                    </li>
+                                                    <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                    <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                </ul> 
+                                            </div>
+                                        </div>   
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/salgados/focaccia.jpg" alt="Focaccia Italiana">  
+                                            </div>
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0 d-block">
+                                                        <li><p class="m-0 prodDescricao pt-3 prodDescricao text-white ">Foccacia Italiana</p></li>
+                                                            <li class="m-0 d-block"> 
+                                                                <p class="m-0 preco prodPreco text-white">R$ 3,99<br><b class="cada">cada</b></p> 
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade d-inline-block" id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div> 
+                                        </div>    
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/salgados/hamburguer_forno.jpg" alt="Hamburguer de forno">   
+                                            </div>    
+                                            <div class="descricao_laranja descricao d-block">
+                                                <ul class="p-0">
+                                                    <li><p class="m-0 prodDescricao pt-3 prodDescricao text-white">Hamburguer de forno</p></li>
+                                                    <li class="m-0 d-block"> 
+                                                        <p class="m-0 preco text-white prodPreco">R$ 3,99<br><b class="cada">cada</b></p>
+                                                    </li>
+                                                    <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                    <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                </ul> 
+                                            </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/salgados/hamburguer_vegano.jpg" alt="Hamburguer Vegano">   
+                                            </div>     
+                                            <div class="descricao_laranja descricao d-block">
+                                                <ul class="p-0 ">
+                                                    <li><p class="m-0 prodDescricao pt-3 prodDescricao text-white">Hamburguer Vegano</p></li>
+                                                    <li class="m-0 d-block"> 
+                                                    <p class="m-0 preco prodPreco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                    </li>
+                                                    <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                    <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>       
+                                              </ul> 
+                                            </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/salgados/coxinha.jpg" alt="Coxinha vegana">   
+                                            </div>    
+                                            <div class="descricao_laranja descricao d-block">
+                                                <ul class="p-0">
+                                                    <li><p class="m-0 text-white prodDescricao pt-3">Coxinha Vegana</p></li>
+                                                    <li class="m-0 d-block"> 
+                                                        <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                    </li>
+                                                    <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                    <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                </ul> 
+                                            </div>
+                                        </div>  
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/salgados/hamburguer_forno.jpg" alt="Hamburguer de forno">   
+                                            </div>    
+                                            <div class="descricao_laranja descricao d-block">
+                                                <ul class="p-0">
+                                                    <li><p class="m-0 prodDescricao pt-3 text-white">Hamburguer de Forno</p></li>
+                                                   <li class="m-0 d-block"> 
+                                                        <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                    </li>
+                                                    <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                    <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade d-inline-block" id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                </ul> 
+                                            </div>
+                                        </div>    
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/salgados/hamburguer_vegano.jpg" alt="Hamburguer Vegano">   
+                                            </div>    
+                                            <div class="descricao_laranja descricao d-block">
+                                                <ul class="p-0 ">
+                                                    <li><p class="m-0 prodDescricao pt-3 text-white">Hambúrguer Vegano</p></li>
+                                                    <li class="m-0 d-block"> 
+                                                        <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                    </li>
+                                                    <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                    <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                </ul> 
+                                            </div> 
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/salgados/coxinha.jpg" alt="Coxinha Vegana"> 
+                                            </div>    
+                                            <div class="descricao_laranja descricao d-block">
+                                                <ul class="p-0">
+                                                    <li><p class="m-0 prodDescricao pt-3 text-white">Coxinha Vegana</p></li>
+                                                    <li class="m-0 d-block"> 
+                                                        <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                    </li>
+                                                    <li class="text-white saiba-mais d-inline-block">Saiba mais</li>  
+                                                    <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                </ul> 
+                                            </div> 
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/salgados/focaccia.jpg" alt="Focaccia Italiana"> 
+                                            </div>    
+                                            <div class="descricao_laranja descricao d-block">
+                                                <ul class="p-0">
+                                                    <li><p class="m-0 prodDescricao pt-3 text-white">Foccacia Italiana</p></li>
+                                                    <li class="m-0 d-block"> 
+                                                        <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                    </li>
+                                                    <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                    <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                </ul> 
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                            <!--   Botão da esquerda e direita do slide -->
+                            <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+                                <span><img class="esquerda" src="img/esquerda_latanja.png" alt="direita"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo1" data-slide="next">
+                                <span><img class="direita" src="img/direita_laranja.png" alt="direita"></span>
+                            </a>
+                        </div>                      
+                    </div>
+                    <!-- Botão de comprar do salgado -->
+                    <div class="row">
+				        <div class="col-12 d-flex justify-content-center">
+				            <button class="salgados_botao botao mb-4 p-2 border-0 text-center" data-toggle="modal" data-target="#modalExemplo"><font class="align-middle">encomendar</font></button>
+				        </div>
+				    </div>
+                    <!-- Fecha Botão de comprar do salgado -->
+				</div>
+                <!-- Fecha o Grupo salgado -->
+                
+                <!-- Lista que aparece no campo de procurar -->    
+                <ul id="list_example" class="lista pt-3">
+                    <a class="resultado_lista play text-body" href="#salgados"><li class="pl-0 pb-2 click1">Salgados</li></a> 
+                    <a class="resultado_lista play text-body" href="#doces"><li class="pl-0 pb-2">Doces</li> </a>
+                    <a class="resultado_lista text-body" href="#bebidas"><li class="pl-0 pb-2 ">Bebidas</li></a> 
+                    <a class="resultado_lista text-body" href="#combo"><li class="pl-0 pb-2 ">Combo</li></a> 
+                    <a class="resultado_lista text-body" href="#empresa"><li>Empresa</li></a> 
+                </ul> 
+                
+                <!-- Padronagem verde -->
+                <div class="row">
+                    <div class="col-12">
+                        <img class="padronagem_verde mt-4 mb-4 " width="100%" src="img/padronagem/testeira_padronagem_site.jpg" alt="padronagem verde">
+                    </div>    
+                </div>
+                <!-- Fecha Padronagem verde -->
+				
+                <!-- Grupo dos Doces -->
+				<div id="doces" class="doces_grupo  anime ml-2 mr-2">
+					<div class="row">
+						<div class="col-12 doces_titulo p-2 pb-2 text-center">
+				            <h1 class=" pb-3">Doces</h1>
+						</div>
+					</div>
+					<div class="row">
+                        <div class="col-12 pl-0 pr-0 d-flex justify-content-center">       
+				            <div id="demo2" class="carousel slide" data-ride="carousel" data-interval="0">  
+                            <!-- Indicators -->
+                                  <ul class="carousel-indicators">
+                                    <li data-target="#demo1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#demo1" data-slide-to="1"></li>
+                                    <li data-target="#demo1" data-slide-to="2"></li>
+                                  </ul>    
+                            <!-- Slide dos doces -->
+                                <div class="container carousel-inner no-padding carousel  ">
+                                    <div class="carousel-item active">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/doces/bolo_banana.jpg" alt="Bolo de banana">   
+                                            </div>
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li>
+                                                            <p class="m-0 prodDescricao pt-3 prodDescricao text-white">Bolo de Banana</p>
+                                                        </li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p  class="m-0 preco prodPreco text-white">R$ 3,99<br><b class="cada">cada</b></p> </li>   
+                                                            <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade d-inline-block" id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul>                                                 
+                                                </div>
+                                        </div>    
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/doces/brownie_1.jpg" alt="Brownie">   
+                                            </div>
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0 d-block">
+                                                        <li ><p class="m-0 pt-3 prodDescricao text-white">Brownie Vegano </li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br> <b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/doces/sonho_1.jpg" alt="Sonho de veganinho">
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Sonho de Veganinho</p></li>
+                                                        <li class="m-0 d-block">
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/doces/tortadefruta.jpg" alt="Torta de Fruta">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Torta de Fruta</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/doces/brownie_1.jpg" alt="Brownie">   
+                                            </div>    
+                                               <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0 d-block">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Brownie Vegano</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade d-inline-block" id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div> 
+                                        </div>    
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/doces/sonho_1.jpg" alt="Sonho de veganinho">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Sonho de Veganinho</p></li>
+                                                        <li class="m-0 d-block">
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul>  
+                                                </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/doces/tortadefruta.jpg" alt="Torta de Fruta">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Torta de Fruta</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/doces/bolo_banana.jpg" alt="Bolo de banana">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">bolo de banana</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                  </ul> 
+                                                </div>
+                                        </div>  
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/doces/sonho_1.jpg" alt="Sonho de veganinho">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Sonho de Veganinho</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade d-inline-block" id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>    
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/doces/tortadefruta.jpg" alt="Torta de Fruta">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Torta de fruta</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div> 
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/doces/bolo_banana.jpg" alt="Bolo de banana">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Bolo de banana</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div> 
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/doces/brownie_1.jpg" alt="Brownie">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Brownie Vegano</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                            <!--    Botão da esquerda e direita do slide  -->
+                            <a class="carousel-control-prev" href="#demo2" data-slide="prev">
+                                <span><img class="esquerda" src="img/esquerda.png" alt="direita"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo2" data-slide="next">
+                                <span><img class="direita" src="img/direita.png" alt="direita"></span>
+                            </a>
+                        </div>        
+                    </div> 
+                    <!--   Botão de comprar dos Doces -->
+					<div class="row">
+						<div class="col-12 d-flex justify-content-center">
+							<button class="doces_botao botao mb-4 p-2 border-0 text-center" data-toggle="modal" data-target="#modalExemplo" onclick="apareceIngrediente()"><font class="align-middle">encomendar</font></button>
+						</div>
+                    </div>
+                    <!--   Fecha Botão de comprar dos Doces -->  
+				</div>
+                <!--   Fecha o grupo dos Doces -->  
+                
+                <!--   Padronagem Laranja -->    
+				<div class="row">
+                    <div class="col-12">
+                        <img class="padronagem_laranja mt-4 mb-4"width="100%"  src="img/padronagem/testeira_padronagem_site-2.jpg" alt="padronagem laranja">
+                    </div>
+                </div>
+                <!--   Fecha a Padronagem Laranja -->
+                
+                <!--  Grupo de Bebidas  -->
+				<div id="bebidas" class="bebidas_grupo  ml-2 mr-2 anime">
+					<div class="row">
+						<div class="col-12 bebidas_titulo p-2 pb-2 text-center">
+				            <h1 class="pb-3">Bebidas</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 pl-0 pr-0 d-flex justify-content-center">
+                            
+                            <!-- Carrossel dos bebidas  -->
+                            <div id="demo3" class="carousel slide" data-ride="carousel" data-interval="0">
+                            <!-- Indicators -->
+                                  <ul class="carousel-indicators">
+                                    <li data-target="#demo1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#demo1" data-slide-to="1"></li>
+                                    <li data-target="#demo1" data-slide-to="2"></li>
+                                  </ul>    
+                                
+                                <!-- Slide das bebidas-->
+                                <div class="container carousel-inner no-padding carousel ">
+                                    <div class="carousel-item active">
+                                        <div class="col-xs-3 col-sm-3 col-md-3  produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/bebidas/agua_minalba.jpg" alt="Agua Minalba">   
+                                            </div>    
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0 ">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Água Minalba</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p  class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>    
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo  d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade d-inline-block" id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div>
+                                        </div>    
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/bebidas/agua_tonica_wewi_organico.jpg" alt="Agua tonica wewi organico">   
+                                            </div>    
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0 d-block">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Água Tônica Wewi </li>
+                                                        <li class="m-0  d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/bebidas/refrigerante_wewi_organico.jpg" alt="Refrigerante Wewi Orgânico">   
+                                            </div>    
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Refrigerante Wewi</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/bebidas/suco_one_900ml.jpg" alt="Suco one 900ml">   
+                                            </div>    
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Suco One</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/bebidas/agua_tonica_wewi_organico.jpg" alt="Agua tonica wewi organico">   
+                                            </div>    
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0 d-block">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white ">Água Tônica Wewi</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade d-inline-block" id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div> 
+                                        </div>    
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/bebidas/refrigerante_wewi_organico.jpg" alt="Refrigerante Wewi Orgânico">   
+                                            </div>    
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Refrigerante Wewi</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/bebidas/suco_one_900ml.jpg" alt="Suco one 900ml">   
+                                            </div>    
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Suco One</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/bebidas/agua_minalba.jpg" alt="Agua Minalba">   
+                                            </div>    
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Água Minalba</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    <div class="carousel-item">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/bebidas/refrigerante_wewi_organico.jpg" alt="Refrigerante Wewi Orgânico">   
+                                            </div>    
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Refrigerante Wewi</p></li>
+                                                            <li class="m-0 d-block"> 
+                                                                <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                            </li>
+                                                            <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                            <li class="q_fundo d-flex justify-content-center">
+                                                            <div data-app="product.quantity" id="quantidade">
+                                                            <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                            <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                            <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                            <input type="button" class="quantidade d-inline-block" id="plus" value='-' onclick="process(-1)" />
+                                                            </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div>
+                                        </div>    
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/bebidas/suco_one_900ml.jpg" alt="Suco one 900ml">   
+                                            </div>    
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Hambúrguer Vegano</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div> 
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/bebidas/agua_minalba.jpg" alt="Agua Minalba">   
+                                            </div>    
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Água Minalba</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div> 
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/bebidas/agua_tonica_wewi_organico.jpg" alt="Agua tonica wewi organico">   
+                                            </div>    
+                                                <div class="descricao_laranja descricao d-block">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Água Minalba</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                    </li>    
+                                                    </ul> 
+                                                </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>     
+                                <!--   Botão esquerda e direita do slide das bebidas -->
+                                <a class="carousel-control-prev" href="#demo3" data-slide="prev">
+                                    <span><img class="esquerda" src="img/esquerda_latanja.png" alt="direita"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#demo3" data-slide="next">
+                                    <span><img class="direita" src="img/direita_laranja.png" alt="direita"></span>
+                                </a>
+				        </div>
+					</div>
+                    
+                    <!-- Botão de comprar das Bebidas -->
+					<div class="row">
+						<div class="col-12 d-flex justify-content-center">
+							<button class="bebidas_botao botao mb-4 p-2 border-0 text-center" data-toggle="modal" data-target="#modalExemplo"><font class="align-middle">encomendar</font></button>
+						</div>
+					</div>
+                    <!-- fecha Botão de comprar das Bebidas -->
+                    
+				</div>
+                <!-- Botão de comprar das Bebidas -->
+                
+                <!-- Padronagem verde -->
+				<div class="row">
+                    <div class="col-12">
+                        <img class="padronagem_verde mt-4 mb-4" width="100%" src="img/padronagem/testeira_padronagem_site.jpg" alt="padronagem verde">
+                    </div>
+                </div>
+                <!-- Fecha Padronagem verde -->
+                
+                <!-- Grupo dos combos -->
+				<div id="combo" class="combo_grupo  ml-2 mr-2 anime" >
+					<div class="row">
+						<div class="col-12 combo_titulo p-2 pb-2 text-center">
+				            <h1 class=" pb-3">Combo</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 pl-0 pr-0 d-flex justify-content-center">  
+                            <div id="demo4" class="carousel slide" data-ride="carousel" data-interval="0"> 
+                            <!-- Indicators -->
+                                  <ul class="carousel-indicators combo_passagem">
+                                    <li data-target="#demo1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#demo1" data-slide-to="1"></li>
+                                    <li data-target="#demo1" data-slide-to="2"></li>
+                                  </ul>    
+                                
+                                <!-- Slide dos Combos -->
+                                <div class="container carousel-inner no-padding carousel ">
+                                    <div class="carousel-item active">
+                                        <div  class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/combos/suco_one_900ml_salgados_combo-1.jpg" alt="Suco one + Salgados Veganos">  
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li ><p class="m-0 prodDescricao pt-3 text-white">Suco One + <br> Salgados</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p  class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>    
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade d-inline-block" id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>    
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/combos/agua_tonica_foccacia_combo-2.jpg" alt=" Agua tonica + focaccia">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0 d-block">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Água Tônica + <br> Foccacia </li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br> <b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/combos/suco_one_sonho_combo-3.jpg" alt="Suco one + sonho veganinho">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Suco One + <br> Sonho Vegano</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/combos/refrigerante_guarana_brownie_combo-4.jpg" alt="Refrigerante Guárana + Brownie">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Refrigerante + <br> Brownie</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/combos/agua_tonica_foccacia_combo-2.jpg" alt=" Agua tonica + focaccia">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0 d-block">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Água Tônica + <br> Foccacia</p></li>
+                                                        <li class="m-0 d-block"><p class="m-0 preco text-white">R$ 3,99<br>
+                                                        <b class="cada">cada</b></p></li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade d-inline-block" id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div> 
+                                        </div>    
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/combos/suco_one_sonho_combo-3.jpg" alt="Suco one + sonho veganinho">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Suco One + <br> Sonho Vegano</p></li>
+                                                        <li class="m-0 d-block"> 
+                                                            <p class="m-0 preco text-white">R$ 3,99<br><b class="cada">cada</b></p>
+                                                        </li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/combos/refrigerante_guarana_brownie_combo-4.jpg" alt="Refrigerante Guárana + Brownie">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li class=""><p class="m-0 prodDescricao pt-3 text-white">Refrigerante + <br> Brownie</p></li>
+                                                        <li class="m-0 d-block"><p class="m-0 preco text-white">R$ 3,99<br>                <b class="cada">cada</b></p></li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/combos/suco_one_900ml_salgados_combo-1.jpg" alt="Suco one + Salgados Veganos">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Suco One + <br> Salgados</p></li>
+                                                        <li class="m-0 d-block"> <p class="m-0 preco text-white">R$ 3,99<br>              <b class="cada">cada</b></p></li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade d-inline-block" id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>  
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/combos/suco_one_sonho_combo-3.jpg" alt="Suco one + sonho veganinho">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Suco One + <br> Sonho Vegano</p></li>
+                                                        <li class="m-0 d-block"> <p class="m-0 preco text-white">R$ 3,99<br>             <b class="cada">cada</b></p></li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade d-inline-block" id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        </div>    
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/combos/refrigerante_guarana_brownie_combo-4.jpg" alt="Refrigerante Guárana + Brownie">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Refrigerante + <br> Brownie</p></li>
+                                                        <li class="m-0 d-block"> <p class="m-0 preco text-white">R$ 3,99<br>             <b class="cada">cada</b></p></li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div> 
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/combos/suco_one_900ml_salgados_combo-1.jpg" alt="Suco one + Salgados Veganos">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Suco One + <br> Salgados</p></li>
+                                                        <li class="m-0 d-block"> <p class="m-0 preco text-white">R$ 3,99<br>             <b class="cada">cada</b></p></li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div> 
+                                        </div>   
+                                        <div class="col-xs-3 col-sm-3 col-md-3 produtos_carrossel divProdutoThumb">
+                                            <div class="deposito">
+                                                <img src="img/combos/agua_tonica_foccacia_combo-2.jpg" alt=" Agua tonica + focaccia">   
+                                            </div>    
+                                                <div class="descricao_verde descricao d-block ">
+                                                    <ul class="p-0">
+                                                        <li><p class="m-0 prodDescricao pt-3 text-white">Água Tônica + <br> Foccacia</p></li>
+                                                        <li class="m-0 d-block"> <p class="m-0 preco text-white">R$ 3,99<br>                 <b class="cada">cada</b></p></li>
+                                                        <li class="text-white saiba-mais d-inline-block">Saiba mais</li>
+                                                        <li class="q_fundo_verde d-flex justify-content-center">
+                                                        <div data-app="product.quantity" id="quantidade">
+                                                        <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>  
+                                                        <input type="button" class="quantidade " id="minus" value='+' onclick="process(1)">    
+                                                        <label id="quant" name="quant" class="resultado text-white prodQntd" size="1" type="text" value="1" maxlength="5">0</label>
+                                                        <input type="button" class="quantidade " id="plus" value='-' onclick="process(-1)" />
+                                                        </div>
+                                                        </li>
+                                                    </ul> 
+                                                </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                                <!-- Botão direita e esquerda do combo -->
+                                <a class="carousel-control-prev" href="#demo4" data-slide="prev">
+                                    <span><img class="esquerda" src="img/esquerda.png" alt="direita"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#demo4" data-slide="next">
+                                    <span><img class="direita" src="img/direita.png"alt="direita"></span>
+                                </a>
+                            <!-- Fecha carrosel -->
+							
+						</div>
+					</div>
+                    <!-- Botão de comprar -->
+					<div class="row">
+						<div class="col-12 d-flex justify-content-center">
+							<button class="combo_botao botao mb-4  p-2 border-0 text-center" data-toggle="modal" data-target="#modalExemplo"><font class="align-middle">encomendar</font></button> 
+						</div>
+					</div>
+                    <!-- Fecha o Botão de comprar -->
+				</div>
+                <!-- Fecha o grupo Combo -->
+                
+                <!-- Padronagem Laranja -->
+                <div class="row">
+                    <div class="col-12">
+                        <img class="padronagem_laranja final mt-4 mb-4" width="100%"  src="img/padronagem/testeira_padronagem_site-2.jpg" alt="padronagem laranja">
+                    </div>        
+                </div>
+                <!-- Fecha Padronagem Laranja -->
+                
+            </section>
+        
+            <!-- Seção Quem somos -->
+            <section>
+            <article>
+                <div  class="bg_empresa img-fluid pl-2  m-0 pt-0  mb-4">
+                    
+                    <!-- Titulo da Empresa -->
+					<div class="row">
+						<div id="empresa" class="col-12 empresa_titulo p-2 pb-2 text-center">
+							<h1 class="pl-2 pb-3">Empresa</h1>
+						</div>
+					</div>
+                    <!-- Fecha Titulo da Empresa -->
+                    
+                    <!-- Banner -->
+					<div class="row">
+						<div class="col-12 p-0">
+							<figure>
+								<img class="img-fluid" width="100%" src="img/banner2.png" alt="banner" alt="Imagem de quem somos">
+							</figure>   
+						</div>						
+					</div>
+                    <!-- Fecha Banner -->
+                    
+                  
+                    <!-- Opção de voltar para o topo -->
+                    <div class="position-fixed topo-botao">
+                        <a href="#topo"><img  src="img/pra-cima.png" alt="volta para o topo da página"></a>
+                    </div>
+                    <!-- Fecha Opção de voltar para o topo -->
+                    
+                    <!-- Texto quem somos?, nossa história, missão,visão e valores -->
+					<div class="row">
+						<div class="col-12 d-flex justify-content-center pl-0 pr-0  pb-4">
+							<div class="p-0 bloco_quemsomos">
+				                <h2 id="quemsomos" class="mb-2 mt-2">O que é a Tre Felini?</h2>
+				                <p class="texto_somos mb-2">A Tre Felini é um espaço criado pela Lucília, em Xerém-RJ, destinado á pessoas que desejam se alimentar de maneira saudável com lanches veganos e muito saborosos.</p>
+				                <p class="texto_somos mb-4">Nosso espaço é aberto para todos que desejam comer algo bom e gostoso, livre de todo alimento de origem animal.</p>
+                                <h2 id="historia" class="mb-2">Nossa história</h2>
+				                <p class="texto_somos mb-2">Lucília, mora no bairro de Xerém-RJ, é vegana há mais de dez anos e tem acúmulo em cozinhar receitas veganas, e no ano 2019 fez um curso de gastronomia. </p>
+				                <p class="texto_somos mb-2">No começo não tinha definido os produtos a serem vendidos, então surgiu uma idéia, porque não vender um Hambúrguer vegano feito na hora e Hambúrgueres de feijão ou soja com batata chips comprada em lojas e sucos ou refrigerantes? Logo decidiu mudar pra área de congelados e começou a fazer coxinhas veganas congeladas que são recheadas com couve flor, que ao mesmo tempo, fica com aparência de coxinha de carne. </p>
+                                <p class="texto_somos mb-4">Atualmente, ela utiliza o Mantiquira como lugar de apresentação e estrear os produtos. </p>
+                                <h2 class="mb-2">Missão, visão e Valores:</h2>
+                                <p class="texto_somos mb-4"><strong>MISSÃO:</strong> Tornar-se o <i>Fast-Food Sáudavel</i> mais popular do Rio de Janeiro.<br>
+				                <strong>VISÃO:</strong> Expandir o movimento social vegano visando uma maior conscientização sobre uma vida mais saudável. <br>
+                                <strong>VALORES:</strong> Cuidado, sustentabilidade, valorização e respeito ao consumo</p>
+				                <div class="linha"></div>
+						
+				            </div>
+                        </div>
+				    </div>
+                   <!-- Fecha Texto quem somos?, nossa história, missão,visão e valores -->
+                    
+				    <div class="row">
+                        <div class="col-12 col-md-6  d-flex justify-content-center p-0 ">
+                            <div class="text-start formulario">
+				                <h2 class="mb-2  ">Contate-nos </h2>
+                                <form>
+                                    <div class="form-group ">
+                                        <label class="mb-2" for="exampleFormControlInput1">E-mail:</label>
+                                        <input type="email" class="form-control campo-texto campo-email mb-3" required id="exampleFormControlInput1" placeholder="nome@exemplo.com" autocomplete="off" title="O email tem que obedecer o esse formato exemplo@servidordeemail.com">
+                                        <ul class="feedback m-0">
+                                        <li class="feedback_arroba"></li>
+                                        <li class="feedback_ponto"></li>
+                                        <li class="feedback_combr"></li>    
+                                        </ul>
+                                      
+                                        <label class="mb-2" for="exampleFormControlSelect1">Assunto:</label>
+                                        <select class="form-control campo-texto  mb-3"  id="exampleFormControlSelect1">
+                                            <option>Sugestões</option>
+                                            <option>Serviços</option>
+                                            <option>Reclamações</option>
+                                        </select>
+                                        <label class="mb-2" for="exampleFormControlTextarea1">Mensagem:</label>
+                                        <textarea class="form-control campo-texto campo-textarea  mb-3" maxlength="150" required id="exampleFormControlTextarea1" rows="4" placeholder="Um máximo de 300 caracteres"></textarea>
+                                        <ul class="feedback">
+                                        <li class="feedback_mensagem"></li>
+                                        </ul>
+                                        <button type="button" class="btn text-white mb-2 botao-enviar p-0">Enviar</button>
+                                    
+                                         
+                                    </div>
+                                    <div class="alert alert-success position-absolute sucesso alert-dismissible fade show"  role="alert">
+                                        E-mail enviado com sucesso!
+                                        <button type="button" class="close"  aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                </form>
+                                
+							</div>
+                     
+                        </div>
+                       
+                        <div class="col-12 col-md-6 d-flex justify-content-center p-0 ">
+							<div class="text-start informacoes">
+				                <h3 id="contatenos" class="mb-2">Endereço</h3>
+                                <p class="info mb-4">R. Marcio Santos da Silva, 20 - Vila Santa<br>
+                                Alice, Duque de Caxias</p>
+                                <h3 class="mb-2">Telefone:</h3>
+                                <p class="info mb-4">(21) 2679-3036 / (21) 99999-9999</p>
+                                 <h3 class="mb-2">E-mail:</h3>
+                                <p class="info mb-4">Trefelini@trefelini.com.br</p>    
+							</div>
+                            
+                        </div>
+                       
+					</div>
+                     
+                </div>
+                <!-- Seção Quem somos -->
+            <!-- alerta de email enviado -->
+                        
+            </article>
+                 
+            </section>
+              
+        <!-- Rodapé -->
+        <footer class="text-white p-4 d-flex justify-content-center">
+            <div class="row">
+                <div class="col-12 col-md-2 d-flex justify-content-center">
+                   
+                    <ul>
+                        <li><h4>Produtos</h4></li>
+                        <a class="text-white" href="#salgados"><li class="link-rodape">Salgados</li></a>
+                        <a class="text-white" href="#doces"><li class="link-rodape">Doces</li></a>
+                        <a class="text-white" href="#bebidas"><li class="link-rodape">Bebidas</li></a>
+                        <a class="text-white" href="#combo"><li class="link-rodape">Combo</li></a>    
+                        <a class="text-white" href="#pedido"><li class="link-rodape">Pedidos</li></a>    
+                    
+                    </ul>
+                
+        
+                </div>
+                <div class="col-12 col-md-2 d-flex justify-content-center">
+                    
+                    <ul>
+                        <li><h4>Empresa</h4></li>
+                        <a class="text-white" href="#quemsomos"><li class="link-rodape">Quem somos?</li></a>
+                        <a class="text-white" href="#historia"><li class="link-rodape">Nossa História</li></a>
+                        <a class="text-white" href="#contatenos"><li class="link-rodape">Contate-nos</li></a>  
+
+                    </ul>
+                </div>
+                
+                <div class="col-12 col-md-2 d-flex justify-content-center">
+                    <ul>
+                    <li><h4>Ajuda</h4></li>    
+                    <a class="text-white" href="#"><li class="link-rodape">FAQ</li></a>
+                    <a class="text-white"  href="#"><li class="link-rodape">Politica e privacidade</li></a>
+                    <a class="text-white" href="#"><li class="link-rodape">Fale Conosco</li></a>                    
+                    </ul>
+                </div>
+                
+                <div class="col-12 col-md-3  d-flex justify-content-center pr-0">
+                    
+                    <ul class="p-0 rodape_newsletter">
+                        <li><h4>Receba nossa newsletter</h4></li>
+                        <li>
+                            <div class="input-group mb-3">
+                              <input type="text"  class="form-control newsletter" placeholder="Coloque aqui o seu e-mail" aria-label="Coloque aqui o seu email" aria-describedby="button-addon2">
+                              <div class="input-group-append">
+                                <button class="btn  botao-envia-rodape text-white align-middle" type="button" id="button-addon2"><strong>Enviar</strong></button>
+                              </div>
+                            </div>
+                        </li>    
+                    </ul>
+                </div>
+                
+                <div class="col-12 col-md-3 d-flex justify-content-center text-center ">
+                    <ul>
+                        <li><h4>Redes Sociais</h4></li>    
+                        <li>
+                            <a href="https://www.facebook.com/trefelini"><img width="40em" src="img/facebook.png" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/trefelini/"><img width="40em"  src="img/instagram.png" alt="Instagram"></a>   
+                            <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5521999999999"><img width="40em"  src="img/whatsapp.png" alt="whatsapp"></a>
+                        
+                        </li>
+                               
+                    </ul>
+                </div>
+        
+            </div>
+        
+        
+        </footer>
+        <!-- Fecha o rodpé -->    
+        
+    </main>
+    <!-- Fecha Tag principal -->
+        	
+	<!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script src="js/precencao_erros.js"></script>
+    <script src="js/jquery.quicksearch.js"></script>
+    <script src="js/aparece_texto.js"></script>
+    <script src="js/mostra_lista.js"></script>
+    <script src="js/paralax.js"></script>
+    <script src="js/colocaCep.js"></script>
+    <script src="js/encomenda.js"></script>
+    <script src="js/quantidade.js"></script>
+
+	<script type="text/javascript">
+		animBanner(1);
+	</script>
+
+    
+
+</body>
+</html>

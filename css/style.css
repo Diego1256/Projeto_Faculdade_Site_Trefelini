@@ -1,0 +1,764 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* Propiedade Geral */
+html{
+    scroll-behavior: smooth;
+   
+}
+.padronagem_verde,.padronagem_laranja{
+    opacity: 0.4;
+}
+.deposito::after {
+  content: '';
+  position: absolute;
+  bottom: 8.24em;
+  left:2.95em;   
+  width:100%; 
+  height: 60%;
+}
+.deposito:hover::after {
+  background-image: url("../img/selecao.png");
+    background-size: 16.8em;
+    background-repeat: no-repeat;
+}
+
+
+
+body{
+	font-family: montserrat, sans-serif;
+    overflow-x: hidden;
+}
+h1{
+	font-size:  1.8em;
+/*    text-transform: uppercase;*/
+	font-weight:bold;
+    margin-bottom: 0;
+}
+h2{
+	font-size: 1.25em;
+	font-weight: 600;
+	color:#AF6128;
+}
+h3{
+  font-size: 1.25em;
+  color:#AF6128;
+    font-weight: 400;
+}
+h4{
+    font-size: 1.05em;
+}
+.texto{
+    color: #AF6128;
+}
+.form-control::placeholder, .campo-texto {
+    color: #206232;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+/*  fecha Propiedade Geral */
+
+/* Propiedade da sessão quem somos? */
+label{
+    font-size:  1rem;
+    font-weight: 500;
+    color: #206232;
+}
+.info{
+font-size:  1rem; 
+color: #206232;
+}
+.campo-texto, .envia{
+    width: 20em;
+    border-radius: 12px;
+    border-color: #AF6128; 
+}
+.informacoes{
+    padding-right: 6.875em;
+}
+.formulario{
+     padding-left: 6.875em;
+}
+.campo-texto::placeholder{
+    font-style: italic;
+}
+/* Fecha Propiedade da sessão quem somos? */
+
+/* Propiedade da sessão do modal da encomenda */
+.campo_texto_encomenda{
+    width: 25em;
+    border-radius: 20px;
+    border-color: #AF6128; 
+}
+.produto_selecionado{
+    border: 1px solid #AF6128;
+     border-radius: 12px;
+    height: auto;
+}
+.qtd{
+    left: 7.9em;
+    bottom: 2.8em;
+    color:#AF6128;
+    font-weight: 600;
+}
+.cep{
+   width: 6em;
+}
+.endereco{
+    width: 18.3em;
+}
+.bairro{
+    width: 18.3em;
+}
+.numero{
+    width: 6em;
+}
+.linha_prod{
+    border-bottom: 1px solid #206232;
+    opacity: 0.5;
+}
+.botao_encomendar{
+    background-color: #206232;
+    font-weight: 600;
+    border-radius: 50px;
+}
+.cancelar{
+    background-color:#AF6128;  
+    width: auto;
+    border-radius: 50px;
+}
+
+.finalizar_bt{
+    width: 10em;
+    background-color: #AF6128;
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.txt_pedido_aceito{
+    width: 32em;
+    padding-top: 1em; 
+    font-size: 1.1em;
+    color: #AF6128;
+}
+.nome_produto{
+    font-size: 0.75rem; 
+}
+.preco_produto{
+     font-size: 0.82rem; 
+    font-weight: 500;
+      line-height: 1.4; 
+    
+}
+.subtotal{
+    font-weight: 600;
+     font-size: 1rem; 
+    
+}
+.precototal{
+     font-size: 1rem; 
+    font-weight: 600;
+}
+.msg_24h p{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.fechar{
+    background-color: #AF6128;
+    font-weight: 600;
+    width: 5em;
+    border-radius: 50px;
+
+}
+/* FechaPropiedade da sessão do modal da encomenda */
+
+
+.link-rodape{
+font-size: 0.90em;    
+}
+li{
+    list-style-type: none;
+}
+.botao-enviar{
+    background-color: #AF6128;
+    border-radius: 25px;
+    height: 2.3em;
+    width: 6rem;
+    font-size: 1rem;
+    margin-left: 13rem;
+    font-weight: 600;
+}
+
+
+.links{
+	background-color: #206232;
+	font-family: montserrat,sans serif;
+	font-size: 1.125em;
+	font-weight: 200; 
+    color: white;
+    
+}
+
+
+
+.nav-link{
+	color: white;
+}
+.animo{
+	padding-bottom: 0.2em;
+}
+.animo:hover{
+ border-bottom: 4px solid white;	
+ transition: all 0.3s ease-in-out;
+
+	font-weight: 300;
+	
+}
+.nav-link:hover{
+ color: white;
+}
+
+.caixa-texto{
+	border-radius: 25px;
+	border: 1px solid #206232;
+	border-right: none;
+	
+	vertical-align: middle;
+	font-size: 15px;
+	font-style: italic;
+	color: rgba(28,98,50,0.58);
+	margin-bottom: auto;
+	outline:none;
+	text-indent: 0.800em;
+}
+
+.caixa-texto:focus{
+	border-radius: 25px;
+	border: 1px solid rgba(32,98,50,0.42);
+	font-style: normal;
+	color: black;
+	border-right: none;
+	font-size: 0.800em;
+
+}
+.procura{
+	background-color:white;
+	border-top: 1px solid #206232;
+	border-bottom: 1px solid #206232;
+	border-right: 1px solid #206232;
+	border-radius: 25px;
+}
+
+.compra:hover{
+	background-color:rgba(240,184,143,0.14);
+    
+    transition: all 0.4s ease-in-out;
+
+    background-size: 5%;
+   
+}
+
+.explicacao{
+	font-weight:600;
+	color:#206232;
+	font-size: 0.9rem;
+    border-top: 3px solid #206232;
+}
+.salgados_titulo{
+	color: #AF6128;
+}
+.salgados_grupo{
+	border-bottom: 3px solid #AF6128;
+	border-top: 3px solid #AF6128;
+    height: auto;
+
+}
+
+.doces_titulo{
+	color: #206232;
+}
+.doces_grupo{
+	border-bottom: 3px solid #206232;
+	border-top: 3px solid #206232;
+    height:auto;
+	
+}
+
+.bebidas_titulo{
+	color: #AF6128;
+}
+.bebidas_grupo{
+	border-bottom: 3px solid #AF6128;
+	border-top: 3px solid #AF6128;
+    height: auto;
+
+}
+
+.combo_titulo{
+	color: #206232;
+	
+}
+.combo_grupo{
+	border-bottom: 3px solid #206232;
+	border-top: 3px solid #206232;
+    height: auto;
+}
+
+
+.botao{
+	border-radius: 30px;
+	width:  9.8rem;
+    height: 2.8em;
+	font-weight: 600;
+	font-size: 0.95rem;
+	text-transform: uppercase;
+  background-color: #206232;
+	color: white;
+    margin-top: 3.6em;
+	
+}
+.botao:hover{
+    background-color: #2E8C48;
+     transition: all 0.3s ease-in-out;
+    
+}
+.bg_empresa{
+	background-image: url("../img/bg-quem-somos.png");
+    background-repeat: no-repeat;
+	border-top: 3px solid #AF6128;
+}
+.empresa_titulo{
+	color: #AF6128;
+}
+.texto_somos{
+	font-size: 1rem;
+	line-height: 1.8;
+	color: dimgrey;
+}
+.bloco_quemsomos{
+    width: 54.7em;
+}
+.linha{
+	border-bottom: 2px solid #206232;
+}
+
+/* Css do carrossel */
+body .no-padding{
+  padding-left: 0;
+  padding-right: 0;
+   }
+
+
+.produtos_carrossel{
+    width: 100%;
+    height:auto;
+display: inline-block;
+ margin-left:-46.5px;
+    z-index: 1;
+    padding-left: 3em;
+    
+}
+.carousel-item{
+/*  width: 72.3rem;*/
+    width: 83rem;
+
+    
+}
+.produtos_carrossel img{
+  width:100%;
+  height:auto;
+}
+.descricao{
+    
+    width: 100%;
+/*    height: 6.875em;*/
+    height: auto;
+    font-size: 0.85em;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.descricao li{
+    list-style-type: none;
+}
+
+.descricao_laranja{
+   background-color:#AF6128; 
+}
+
+.descricao_verde{
+   background-color:#206232; 
+}
+
+.unidade{
+    font-weight: 200;
+     font-size: 0.95rem;
+    line-height: 1.8;
+}
+.preco{
+    font-size: 1.4em;
+    line-height: 0.9;
+
+    padding-left:10em;
+     
+  
+
+}
+.cada{
+    font-size: 0.800em;
+    font-weight: 200;
+    top: 14px;
+    }
+.direita{
+    padding-right: 0.5em;
+}
+.esquerda{
+     padding-left: 0.5em;
+}
+
+.direita,.esquerda{
+/*    width:5em;*/
+    margin-top: auto;
+    margin-bottom: auto;
+}
+/*
+.teste{
+    width: 80em;
+}
+*/
+
+/* Css do carrossel */
+
+
+.lista{
+    display: none;
+    
+    background-color: #fdfdfd;
+    position: absolute;
+    top: 5em;
+    left: 25.4em;
+    width: 43em;
+    height: 12em;
+    font-size: 0.9em;
+    border-radius: 5px;
+    font-weight: 600;
+    animation: aparece 0.5s ease-in ;
+}
+@keyframes aparece{
+    0%{
+      opacity: 0;  
+   
+        height: 3;
+    }
+     100%{
+       opacity: 1; 
+       
+         height: 12em;
+
+    }
+}
+
+
+.botao-envia-rodape{
+    height:2.22em;
+    background-color: #AF6128;
+    font-size: 0.9em;
+    width: 6em;
+}
+.newsletter{
+    height: 2.5em;
+    font-size: 0.8em;
+    width: 5em;
+}
+footer{
+    background-color: #206232;
+/*    height: 18.0625em;*/
+        height: auto;
+    
+}
+
+
+/*Css do paralax */
+
+
+.js .anime {
+	opacity: 0.5;
+	transform: translate3D(-90px, 0px, 0px);
+
+}
+
+.js .anime-init {
+	opacity: 1;
+	transform: translate3D(0px, 0px, 0px);
+	transition: .7s all ease;
+
+}
+
+.js .anime-final {
+	opacity: 0.5;
+	transform: translate3D(90px, 0px, 0px);
+    transition: .4s all ease;
+   
+
+}
+
+.campo-texto{
+    width: 100%;
+}
+
+/*
+.carousel{
+    width: 100em; 
+    
+}
+*/
+
+
+.topo-botao{
+    opacity: 0.5;
+    z-index: 500;
+    left: 79.4em;
+    top: 35.8em;
+   
+}
+.topo-botao img{
+     width:4.6em;
+}
+.encomenda{
+    z-index: 1041 !important;
+}
+.modal-content{
+    width: 60em;
+    height: auto;
+    background-image: url("../img/bg-pedido.png");
+
+
+}
+.prodDescricao{
+    padding-left:1.18em; 
+}
+.modal-dialog{
+    margin-left: 14em;
+    font-size:  1em;
+    
+}
+.titulo_finalizar{
+    color:#AF6128;
+}
+.modal-header{
+    border-bottom: 3px solid #206232;
+}
+.modal-footer{
+    border-top: 3px solid #206232;
+}
+
+.confirmacao{
+    z-index: 1042 !important;
+}
+.pagina_confimacao{
+    width: 30em;
+    height:auto;
+    box-shadow:  0 0 0 99999px rgba(0,0,0,.8);
+}
+.corpo_conf{
+    height: 8em;
+}
+.posicao_confirmacao{
+   margin-top:12em;  
+   margin-left: 24.5em; 
+}
+.conf{
+    width: 5em;
+    background-color: #206232;
+    font-weight: 600;
+    border-radius: 50px;
+    
+}
+.pergunta_conf{
+    font-weight:500; 
+    padding-top: 2em; 
+    font-size: 1.1em;
+}
+.pedido_aceito{
+    z-index: 1043!important;
+}
+.pg_pedido_aceito{
+    box-shadow:  0 0 0 99999px rgba(0,0,0,.8);
+    height: auto;
+    width: 40em;
+}
+.posicao_pedido_aceito{
+    margin-top:12em;  
+    margin-left: 22em; 
+}
+
+.ingrediente_coxinha{
+    display: none;
+    background-color: rgba(160,90,40, 0.95);
+    z-index: 3;
+    font-size: 0.73em;
+    width: 23.1em;
+    height: 14em;
+    position: absolute;
+    top:0;
+    left: 4.1em;
+    line-height:1.7 ;
+    font-weight: 300;
+    overflow-y:auto;
+    border-radius: 5px 5px 0 0;
+    scrollbar-track-color: white;
+    
+    
+
+}
+
+.ingrediente_coxinha h5{
+    font-size: 1.2em;
+}
+.ingrediente_coxinha p{
+    width: 100%;
+
+}
+.ingrediente_coxinha::-webkit-scrollbar-thumb{
+    background: #dde;
+    border-radius: 50px;
+    
+}
+.ingrediente_coxinha::-webkit-scrollbar {
+  width: 1em;
+  height: auto;
+  background-color: #bbb;  
+}
+
+.saiba-mais{
+    text-align: center;
+    position: relative;
+    bottom:  1.8em;
+    left: 0.9em;
+    font-weight: 500;
+    font-size: 0.9em;
+    width:6.5em;
+    height: auto;
+    border-radius: 10px;
+    padding:0.3em;
+}
+.saiba-mais:hover{
+    background-color:rgba(0,0,0,0.2);
+    transition: all 0.5s ease-in-out;
+    
+}
+.carousel-control-prev,.carousel-control-next{
+    width: 5em;
+}
+/* Alertas */
+.alert-danger{
+    top: 4rem;
+    left: 22.9rem;
+    font-size: 0.85rem;
+    animation-name: some-alerta;
+    animation-duration: 1s;
+    z-index: 3;
+}
+.sucesso{
+    font-size: 0.85rem;
+    top: 12rem;
+    left:21.8rem;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    padding-right: 3em;
+    display: none;
+    animation-duration: 3s;
+    animation-name: some-sucesso;
+    z-index: 3; 
+}
+@keyframes some-sucesso{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.8; 
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}
+@keyframes some-alerta{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* quantidade */
+.q_fundo{
+   background-color: #965322;
+    padding: 0.8em;
+
+}
+.q_fundo_verde{
+    background-color: #174724;
+    padding: 0.8em;
+}
+.quantidade{
+    border-radius: 50px;
+
+    width:1.8em;
+    height: 1.8em;
+
+
+    font-size:1.6em;
+    background-color:transparent;
+    color: white;
+
+    border: 2.1px solid white;
+
+    font-family: montserrat;
+    text-align: center;
+    padding: 0.2em;
+    
+
+}
+
+.resultado{
+    margin: 0 1.3em 0 1.3em;
+    padding: auto;
+
+    font-size: 1.3em;
+    
+
+}
+body .carousel-indicators li{
+    background-color: darkgray;
+    padding-bottom: 0.25em;
+    border-radius: 80px;
+    height: 0.4em;
+    width: 1em;
+    opacity: 0.6;
+}
+body .carousel-indicators .active {
+    background-color: dimgrey;
+}
+body .carousel-indicators{
+  top: 21.3em;
+  
+}
+.combo_passagem{
+    margin-top:1.2em;
+}
+
+.feedback{
+    font-size: 0.8em;
+    color: red;
+    position: relative;
+    bottom: 0.7em;
+    right: 2.9em;
+}
+
+.prodSelecionado .deposito::after {
+    background-image: url("../img/selecao.png");
+    background-size: 16.8em;
+    background-repeat: no-repeat;
+}

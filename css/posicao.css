@@ -1,0 +1,520 @@
+@media (min-width: 768px) and (max-width:1200px) {
+    .produtos_carrossel {
+        max-width: 24.5%;
+/*        margin-right: 1rem;*/
+        margin-right: 0;
+        padding: 0;
+        padding-left: 4rem;
+  
+    }
+    .carousel-item{
+    width: 71.8rem;    
+}
+        
+    .direita{
+        padding-left: 0em;
+        width: 2em;
+    }
+    .esquerda{
+        padding-right: 0em;
+         width: 2em;
+    }
+.descricao{
+    font-size: 0.68em;
+}
+h1{
+    font-size:  1.6em;
+}
+body .carousel-indicators{
+  top: 18em;
+  
+}
+footer{
+    font-size:0.8em;
+        
+}
+    h2{
+       font-size: 1.4em;  
+    }
+    h3{
+       font-size: 1.3em; 
+    }
+    h4{
+        font-size: 1em;
+    }
+    .texto_somos{
+        font-size: 1em;
+    }
+    .info{
+        font-size:0.9em; 
+    }
+    .bloco_quemsomos{
+        width: 37em;
+        margin: auto;
+        
+       
+    }
+    .informacoes{
+        font-size: 0.92em;
+        margin-left: 1.6em;
+    }
+    .formulario{
+        font-size: 0.9em;
+    }
+    footer img{
+        width: 20%;
+    }
+      .topo-botao{
+        left: 92%;
+        top: 31.4em;
+
+    }
+}
+@media (min-width: 578px) and (max-width: 767.98px) {
+     .bloco_quemsomos{
+        width: 34em;
+    }
+      h2{
+       font-size: 1.1em;  
+    }
+     .texto_somos{
+        font-size: 0.8em;
+    }
+    .links{
+        font-size: 1em;
+    }
+
+     .campo-procura{
+         width: 22em;
+    }
+    .direita{
+        padding-left: 0;
+        width: 2.5em;
+    }
+    .esquerda{
+        padding-right: 0;
+         width: 2.5em;
+    }
+    .produtos_carrossel {
+        max-width: 21.2%;
+        margin-left: 0;
+        padding: 0;
+        padding-left: 1rem;
+       
+    }
+    .carousel-item{
+    width: 78rem;    
+}
+      .formulario{
+        position: relative;
+        padding: 0;
+        margin: auto;
+    }
+      .informacoes{
+        position: relative;
+        padding: 0;
+        margin: auto;
+    }
+       footer{
+        text-align: center;
+    }
+    footer ul{
+        margin-right: 3em;
+    }
+    .rodape_newsletter{
+       margin-left: 2em;
+    }
+     .topo-botao{
+        left: 86%;
+        top: 31em;
+
+    }
+}
+
+@media (max-width: 576px) {
+    .prodDescricao {
+
+     padding-left: 0.4em;    
+
+    }
+    
+    
+    .produtos_carrossel {
+        position: relative;
+        left: 1.98em;
+        
+    }
+    
+    body .carousel-indicators{
+        top:20.3em;    
+    }
+    .tela{
+/*        margin-left: 1em;*/
+    }
+    
+    .cabecalho{
+    background-color: #206232;
+    padding-top: 0;
+    padding-bottom: 0;    
+    margin-top: 0;  
+    height: 4em;    
+    }
+
+
+    .logo_img{
+        position: relative;
+        left: 8em;
+        width: 6em;
+    }
+    .carrinho{
+        filter: brightness(800%);
+        position: relative;
+        left: 9em;
+        z-index: 3;
+        height: 28px;
+        width: auto;
+    }
+/*
+    .compra:hover{
+        background-color: transparent;
+    }
+*/
+    .links{
+        position: relative;
+        right: 18.4em;
+        top: 0.2em;
+        z-index:1; 
+       font-size: 15px;
+        font-weight: 300;
+       width: 10em;
+        
+
+        
+    }
+    .links li{
+       padding-left: 1.02em; 
+    }
+    
+    .animo{
+/*       padding-left:2em;*/
+        padding-right: 1em;;
+    }
+    .animo:hover{
+        border: 0;
+        background-color: rgba(52,158,81,0.3);
+    }
+    .campo-procura{
+        position: relative;
+        left: 4.3em;
+        width: 15em;
+        top: 0.1em;
+        
+        z-index: 3;
+        text-align: center;
+       
+/*        vertical-align: middle;*/
+        
+    }
+    .caixa-texto, .procura{
+       height: 88%;
+        font-size: 11.59px;
+    }
+    .form-control::placeholder{
+        font-size: 11.59px;
+        padding: auto;        
+    }
+    .lista{
+        position: absolute;
+        left: 6em;
+        z-index: 4;
+        width: 18em;
+        top: 10.7em;
+        font-size: 0.82em;
+        padding: 2em;
+     
+    }
+    .alert{
+        top: 10.9em;
+        left: 9.2em;
+        width: 20.4em; 
+        font-size: 0.8em;
+    } 
+    .forma_pagamento{
+        width: 18em;    
+    }
+    .titulo_dt_recebimento{
+        width: 18em; 
+    }
+    .modal-content{
+        width: 20em;
+        height:auto;
+    }
+    .modal-dialog{
+        margin-left: 1.8em;
+        font-size:  1em; 
+        width: 20%;
+        height: 10%;    
+    }
+    .campo_texto_encomenda{
+        width: 18em;
+    }
+
+    .subtotal,.precototal{
+        font-size:1.2rem;
+    }
+    .quantidade_produto{
+        position: relative;
+        right: 0.58em;
+        top: 0.6em;
+        font-size: 1.4em;
+    }
+    .produto_selecionado, .campo_selec{
+        position: absolute;
+        top: 22.5em;
+        right: 0.5em;
+        width: 18em;
+        height: auto;
+    }
+    .modal-body{
+        height: 68em;
+        
+    }
+    .preco_produto{
+        margin-left: 0.5em;
+        font-size:0.92em;
+    }
+    .nome_produto{
+        font-size:0.85em;
+    }
+    .texto_obs_encomenda{
+        position: absolute;
+        top: 37.5em; 
+        right: 11.6em;
+    }
+    .texto_obs_encomenda p{
+        width: 23.636em; 
+        
+    }
+    .modal-content{
+        height: auto;
+        }
+    .botao_encomendar, .cancelar{
+       border-radius: 50px;
+        margin-right: 1.4em;
+        width: 8.5em;
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+
+    .corpo_conf{
+        height: 6em;
+    }
+    .pagina_confimacao{
+    width: 22em;
+    height:auto;
+    margin-left: -0.8em;    
+    }
+
+    .pergunta_conf{
+        padding-top: 0.2em;
+        width: 50em;
+
+        text-align: center;
+    }
+    .conf, .fechar{
+        border-radius: 50px;
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+    .pg_pedido_aceito{
+    width: 22em;
+    height:auto;
+    margin-left: -0.8em;    
+    }
+    .txt_pedido_aceito{
+       font-size:0.9em;  
+    }
+    .finalizar_bt{
+        border-radius: 50px;
+        width: 8em;
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+    .padronagem_laranja{
+        padding: 0;
+        margin-bottom: 1em;
+        margin-top: 1em;
+/*        width: 44.8em;*/
+        width: 100%;
+    }
+    .padronagem_verde{
+        padding: 0;
+        margin-bottom: 1em;
+        margin-top: 1em;
+/*        width: 44.8em;*/
+        width: 100%;
+    }
+    .bg_empresa{
+        margin-top: 0;
+    }
+    .topo-botao{
+/*
+        left: 20.4em;
+        top: 39.5em;
+*/
+        display: none;
+
+    }
+    .topo-botao img{
+        width: 4em;
+    }
+    footer{
+        text-align: center;
+        width: 104%;
+    }
+
+    footer ul{
+        margin-right: 3em;
+    }
+    .rodape_newsletter{
+       margin-left: 2em;
+    }
+    
+    h1{
+	font-size:  1.4em;
+
+    }
+    h2{
+        font-size: 1em;
+
+    }
+    h3{
+      font-size: 0.8em;
+
+    }
+    h4{
+        font-size: 1em;
+    }
+    .texto_somos{
+        font-size: 0.8em;
+    }
+    .info{
+        font-size:0.9em; 
+    }
+    .bloco_quemsomos{
+        width: 20em;
+    }
+    .explicacao{
+        font-size: 0.8rem;
+    }
+    .botao{
+        font-size: 0.95rem;
+        margin-top: 1.6em;
+    }
+    .formulario{
+        position: relative;
+        padding: 0;
+        margin: auto;
+    }
+    .informacoes{
+        position: relative;
+        padding: 0;
+        margin: auto;
+    }
+    .banner-video{
+        background-size:auto;
+        padding-left: 0.9em;
+        padding-right: 0.9em;
+    }
+    /* Css do carrosel responsivo */
+    
+    .carousel-item :nth-of-type(n+2){
+        display: none;
+    }
+ 
+    .carousel-item{
+        width: 20rem;
+        margin: auto;
+        height: auto;
+
+    }
+ 
+
+    .descricao{
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .preco{
+        padding: 0;
+        padding-top:12px; 
+    }
+    .cada{
+        line-height: 1.6;
+    }
+   .js .anime-init, .js .anime-final,.js .anime{
+        opacity: 1;
+	transform: translate3D(0px, 0px, 0px);
+	transition-duration:none;
+    }
+    
+    .direita{
+    padding-left: 1.2em;
+    width: 3.2em;    
+    }
+    .esquerda{
+        padding-right: 1.2em;
+        width: 3.2em; 
+    }
+/*
+   .deposito:hover::after {
+    background-image:url(..)
+        
+    }
+*/
+    .quantidade{
+        padding: 0;
+        width:1.6em;
+        height: 1.6em;
+        font-size:1.4em;
+        
+    }
+
+    .explicacao{
+        padding: 0 1.9em 0 1.9em;
+    }
+    
+    .saiba-mais{
+        visibility: visible;
+        line-height: 0;
+        bottom: 19.6em;
+        left: -12.6em;
+        visibility: hidden;
+
+    }
+    .saiba-mais::after{
+         visibility: visible;
+         content: url("../img/saibamais.png");
+        background-repeat: no-repeat;
+        position: absolute;
+     
+
+    }
+    .ingrediente_coxinha{
+        left: 4.3em; 
+        top: 0;
+        height:13.8em; 
+        width: 23em;
+        font-size: 0.7em
+    }
+/*
+    .direita,.esquerda{
+        width: 2em;
+        padding: 0;
+    }
+*/
+        .salgados_titulo h1, .doces_titulo h1, bebidas_titulo h1, combo_titulo h1{
+        padding-right: 0.085em;
+    }
+}
+
